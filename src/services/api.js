@@ -1,4 +1,4 @@
-export const API_BASE = (import.meta?.env?.VITE_API_BASE ?? "http://207.154.249.186").replace(/\/$/, "");
+export const API_BASE = (import.meta?.env?.VITE_API_BASE ?? "http://207.154.249.186/api").replace(/\/$/, "");
 export const ADMIN_KEY = import.meta?.env?.VITE_ADMIN_API_KEY ?? "supersecret";
 
 
@@ -6,7 +6,7 @@ async function request(path, init = {}) {
     const headers = new Headers(init.headers || {});
     headers.set("Content-Type", "application/json");
     if (ADMIN_KEY && !path.startsWith("/public/")) headers.set("Authorization", `Bearer ${ADMIN_KEY}`);
-    const res = await fetch(`${API_BASE}/api${path}`, { ...init, headers });
+    const res = await fetch(`${API_BASE}${path}`, { ...init, headers });
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     return res.json();
 }
