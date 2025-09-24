@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://207.154.249.186/api";
+const API_BASE = import.meta.env.VITE_API_BASE || "https://flexassignment.xyz/api";
 
 export interface Review {
     id: number;

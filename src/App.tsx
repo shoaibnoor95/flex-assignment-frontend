@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/public/:idOrSlug" element={<PropertyPublic />} />
+        <Route path="/property/:idOrSlug" element={<PropertyPublic />} />
 
       </Routes>
     </BrowserRouter>

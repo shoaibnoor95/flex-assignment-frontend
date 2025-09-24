@@ -1,4 +1,4 @@
-export const API_BASE = (import.meta?.env?.VITE_API_BASE ?? "http://207.154.249.186/api").replace(/\/$/, "");
+export const API_BASE = (import.meta?.env?.VITE_API_BASE ?? "https://flexassignment.xyz/api").replace(/\/$/, "");
 export const ADMIN_KEY = import.meta?.env?.VITE_ADMIN_API_KEY ?? "supersecret";
 
 

@@ -1,4 +1,5 @@
-export const API_BASE = (import.meta.env.VITE_API_BASE ?? '').replace(/\/$/, '');
+export const API_BASE = import.meta.env.VITE_API_BASE || "https://flexassignment.xyz/api";
+
 
 async function request(path, init = {}) {
     const res = await fetch(`${API_BASE}${path}`, { ...init });
