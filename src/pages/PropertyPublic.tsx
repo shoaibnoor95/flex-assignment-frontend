@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReviewsSection from "../components/public/ReviewsSection";
 import { publicApi } from "../services/publicApi";
 import { useParams } from "react-router-dom";
+import logo from "/logo.png";
 
 export default function PropertyPublic() {
     const [prop, setProp] = useState(null);
@@ -40,7 +41,7 @@ export default function PropertyPublic() {
                     <div className="flex items-center gap-2">
                         {/* Logo */}
                         <img
-                            src="/logo.png"   // <- make sure this matches your file name in public/
+                            src={logo}   // <- make sure this matches your file name in public/
                             alt="The Flex Logo"
                             className="h-7 w-auto"
                         />
