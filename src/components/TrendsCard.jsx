@@ -24,7 +24,7 @@ export default function TrendsCard({ propertyId, since }) {
 
     const handleViewProperty = () => {
         const appUrl = window.location.origin;
-        window.open(`${appUrl}/property/${propertyId}`, '_blank'); // opens in new tab
+        window.open(`${appUrl}/property/${propertyId}`); // opens in new tab
         // or use: window.location.href = `${appUrl}/public/14`; to open in same tab
     };
 
